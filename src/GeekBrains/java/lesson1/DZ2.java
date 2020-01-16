@@ -10,8 +10,10 @@ public class DZ2 {
         float e = 12.23f;
         double f = 123.123;
         char chr = 'A';
-        String chr1 = "Символы";
         boolean answer = true;
+        System.out.println(a + ", " + b + ", " + c + ", " + d + ", " + e  + ", " + f);
+        System.out.println(chr);
+        System.out.println(answer);
 
 
 
