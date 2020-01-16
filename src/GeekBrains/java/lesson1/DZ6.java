@@ -8,4 +8,5 @@ public class DZ6 {
     public static void main(String[] args) {
         System.out.println(isNegative(0));
     }
+
 }
