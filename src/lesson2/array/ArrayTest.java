@@ -3,8 +3,8 @@ package lesson2.array;
 public class ArrayTest {
     public static void main(String[] args) {
 
-        int[] data = new int[5];
-        data[2] = 5;
+//        int[] data = new int[5];
+//        data[2] = 5;
 //        data[-2] = 5;
 //        data[5] = 5;
 //        for (int value : data){

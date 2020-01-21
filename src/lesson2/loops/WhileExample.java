@@ -1,6 +1,6 @@
 package lesson2.loops;
 
-public class WhileExample {
+public class WhileExample{
     public static void main(String[] args) {
         int i = 0;
 //        while (true) {
@@ -10,12 +10,12 @@ public class WhileExample {
 //            System.out.println(i);
 //            i++;
 //        }
-        do {
+        do{
             if (i >= 5) {
                 break;
             }
             System.out.println(i);
             i++;
-        } while (true);
+        }while (true);
     }
 }

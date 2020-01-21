@@ -31,7 +31,7 @@ public class ForExample {
 //        for (char c : str.toCharArray()) {
 //            System.out.println(c);
 //        }
-        int i =0;
+        int i;
         int stopDigit = 7;
         for ( i = 0; i < 20 ; i++) {
             if (i == stopDigit) {
