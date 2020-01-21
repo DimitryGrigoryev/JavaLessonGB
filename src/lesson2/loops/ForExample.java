@@ -13,14 +13,23 @@ public class ForExample {
 //            System.out.println(i);
 //            System.out.println(j);
 //        }
-        for (int i = 0; i < 5; i++){
-            for (int j = 0; j < 5; j++){
-                System.out.println("i = " + i + "; j = " + j);
-            }
-        }
-        for (;;) {
-            System.out.println("Hello");
+//        for (int i = 0; i < 5; i++){
+//            for (int j = 0; j < 5; j++){
+//                System.out.println("i = " + i + "; j = " + j);
+//            }
+//        }
+//        for (int i = 5; i < 5;) {
+//            System.out.println("Hello");
+//        }
+        String str = "12345";
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            System.out.println(c);
         }
 
+        System.out.println("ForEach example:");
+        for (char c : str.toCharArray()) {
+            System.out.println(c);
+        }
     }
 }
