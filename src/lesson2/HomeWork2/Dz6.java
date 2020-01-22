@@ -7,13 +7,13 @@ public class Dz6 {
         int[] arr3 = { 1, 1, 1, 2, 1 };
 
 
-        System.out.println(CheckBalance(arr));
-        System.out.println(CheckBalance(arr2));
-        System.out.println(CheckBalance(arr3));
+        System.out.println(checkBalance(arr));
+        System.out.println(checkBalance(arr2));
+        System.out.println(checkBalance(arr3));
     }
 
 
-    private static boolean CheckBalance(int[] data) {
+    private static boolean checkBalance(int[] data) {
         int sumLeft = 0;
         int sumRight;
         for (int i = 0; i < data.length; i++) {

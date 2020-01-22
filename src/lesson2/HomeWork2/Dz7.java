@@ -1,5 +1,7 @@
 package lesson2.HomeWork2;
 
+import java.util.Arrays;
+
 public class Dz7 {
     public static void main(String[] args) {
 //        int[] movArr = {1, 2, 3, 4, 5};
@@ -15,9 +17,7 @@ public class Dz7 {
         int temp;
         int n = i % arr.length;
         if (n == 0 || n == arr.length) {
-            for (int value : arr){
-            System.out.print(value);
-            }
+            System.out.print(Arrays.toString(arr));
         } else if (n < 0) {
             for (int move = 0; move > n; move--) {
                 temp = arr[0];
@@ -37,6 +37,7 @@ public class Dz7 {
                 System.out.print(value);
             }
         }
+
         System.out.println(" Move to : " + i + " symbol");
     }
 }
