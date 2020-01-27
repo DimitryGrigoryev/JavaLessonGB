@@ -4,7 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class TikTakToeAi {
-    private static final int SIZE = 3;
+    private static final int SIZE = 7;
+    public static final int DOTS_TO_WIN = 6;
 
     private static final char DOT_EMPTY = '•';
     private static final char DOT_X = 'X';
@@ -62,16 +63,79 @@ public class TikTakToeAi {
     }
 
     private static boolean checkWin (char symbol) {
-        if (map[0][0] == symbol && map[0][1] == symbol && map[0][2] == symbol) return true;
-        if (map[1][0] == symbol && map[1][1] == symbol && map[1][2] == symbol) return true;
-        if (map[2][0] == symbol && map[2][1] == symbol && map[2][2] == symbol) return true;
+        int sumWinDot = 0;
+        int startDot = SIZE - DOTS_TO_WIN;
+        for (int i = 0; i < SIZE; i++) {
+            for (int k = 0; k <= startDot; k++) {
+                for (int j = k; j < SIZE; j++) {
+                    if (map[i][j] == symbol) {
+                        sumWinDot++;
+                    } else {
+                        sumWinDot = 0;
+                        break;
+                    }
+                    if (sumWinDot == DOTS_TO_WIN) {
+                        return true;
+                    }
+                }
+            }
+        }
+        for (int j = 0; j < SIZE; j++) {
+            for (int k = 0; k <= startDot; k++) {
+                for (int i = k; i < SIZE; i++) {
+                    if (map[i][j] == symbol) {
+                        sumWinDot++;
+                    } else {
+                        sumWinDot = 0;
+                        break;
+                    }
+                    if (sumWinDot == DOTS_TO_WIN) {
+                        return true;
+                    }
+                }
+            }
+        }
 
-        if (map[0][0] == symbol && map[1][0] == symbol && map[2][0] == symbol) return true;
-        if (map[0][1] == symbol && map[1][1] == symbol && map[2][1] == symbol) return true;
-        if (map[0][2] == symbol && map[1][2] == symbol && map[2][2] == symbol) return true;
+        for (int k = 0; k <= startDot; k++) {
+            for (int i = k; i < SIZE; i++) {
+                if (map[i][i] == symbol) {
+                    sumWinDot++;
+                } else {
+                    sumWinDot = 0;
+                    break;
+                }
+                if (sumWinDot == DOTS_TO_WIN) {
+                    return true;
+                }
+            }
+        }
 
-        if (map[0][0] == symbol && map[1][1] == symbol && map[2][2] == symbol) return true;
-        if (map[0][2] == symbol && map[1][1] == symbol && map[2][0] == symbol) return true;
+        for (int k = 0; k <= startDot; k++) {
+            for (int i = k; i < SIZE; i++) {
+                int j = map.length - 1 - i;
+                if (map[i][j] == symbol) {
+                    sumWinDot++;
+                } else {
+                    sumWinDot = 0;
+                    break;
+                }
+                if (sumWinDot == DOTS_TO_WIN) {
+                    return true;
+                }
+            }
+        }
+
+
+//        if (map[0][0] == symbol && map[0][1] == symbol && map[0][2] == symbol) return true;
+//        if (map[1][0] == symbol && map[1][1] == symbol && map[1][2] == symbol) return true;
+//        if (map[2][0] == symbol && map[2][1] == symbol && map[2][2] == symbol) return true;
+
+//        if (map[0][0] == symbol && map[1][0] == symbol && map[2][0] == symbol) return true;
+//        if (map[0][1] == symbol && map[1][1] == symbol && map[2][1] == symbol) return true;
+//        if (map[0][2] == symbol && map[1][2] == symbol && map[2][2] == symbol) return true;
+//
+//        if (map[0][0] == symbol && map[1][1] == symbol && map[2][2] == symbol) return true;
+//        if (map[0][2] == symbol && map[1][1] == symbol && map[2][0] == symbol) return true;
 
         return false;
     }
