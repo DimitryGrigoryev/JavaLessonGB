@@ -10,10 +10,13 @@ public class Staff {
 
     public static void main(String[] args) {
         Staff staff1 = new Staff("Johnik", "Engeneer", "001@gmail.com", "+79230000000");
-        staff1.setWages(45000);
-        staff1.setAge(45);
         printInfo(staff1);
-        System.out.println("-------------");
+
+        staff1.setWages(45000);
+        staff1.setAge(31);
+        printInfo(staff1);
+        System.out.println("Change: " + staff1.getWages() + "-" + staff1.getAge() + "-------------");
+        System.out.println();
 
 
         Staff[] stArray = new Staff[5];
