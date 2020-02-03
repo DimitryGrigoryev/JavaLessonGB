@@ -1,56 +1,43 @@
 package lesson6.HW6;
 
-public class Animals {
+public abstract class Animals {
 
-    protected String name;
-    private String color;
-    private int age;
+    protected int maxRun;
+    protected int maxJump;
+    protected int maxSwim;
 
+    public Animals(int maxRun, int maxJump, int maxSwim ) {
+        this.maxRun = maxRun;
+        this.maxJump = maxJump;
+        this.maxSwim = maxSwim;
+    }
 
+    public abstract boolean run(int distance);
+    public abstract boolean swim(int distance);
+    public abstract boolean jump(int height);
 
-//    public Animals(String name, String color, int age) {
-//        super();
-//        this.name = name;
-//        this.color = color;
-//        this.age = age;
-//    }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public String getColor() {
-//        return color;
-//    }
-//
-//    public void setColor(String color) {
-//        this.color = color;
-//    }
-//
-//    public int getAge() {
-//        return age;
-//    }
-//
-//    public void setAge(int age) {
-//        this.age = age;
-//    }
-//
-//    public void printInfo() {
-////        System.out.println(this);
-//        System.out.printf("Кличка = %s; Цвет = %s; Возраст = %d%n",
-//                getName(),
-//                getColor(),
-//                getAge());
-//    }
-//
-//    public abstract void voice();
+    public void printInfo() {
+        System.out.println(this);
+    }
+
+    public void setMaxRun(int maxRun) {
+        this.maxRun = maxRun;
+    }
+
+    public void setMaxJump(int maxJump) {
+        this.maxJump = maxJump;
+    }
+
+    public void setMaxSwim(int maxSwim) {
+        this.maxSwim = maxSwim;
+    }
 
     @Override
     public String toString() {
-        return "Animal{" +
-                "name='" + name + '\'' +
-                ", color='" + color + '\'' +
-                ", age=" + age +
+        return "Animals{" +
+                "maxRun=" + maxRun +
+                ", maxJump=" + maxJump +
+                ", maxSwim=" + maxSwim +
                 '}';
     }
 }
