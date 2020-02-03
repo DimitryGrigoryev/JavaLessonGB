@@ -3,10 +3,10 @@ package lesson6.HW6;
 public abstract class Animals {
 
     protected int maxRun;
-    protected int maxJump;
+    protected double maxJump;
     protected int maxSwim;
 
-    public Animals(int maxRun, int maxJump, int maxSwim ) {
+    public Animals(int maxRun, double maxJump, int maxSwim ) {
         this.maxRun = maxRun;
         this.maxJump = maxJump;
         this.maxSwim = maxSwim;
@@ -14,7 +14,7 @@ public abstract class Animals {
 
     public abstract boolean run(int distance);
     public abstract boolean swim(int distance);
-    public abstract boolean jump(int height);
+    public abstract boolean jump(double height);
 
     public void printInfo() {
         System.out.println(this);
@@ -24,7 +24,7 @@ public abstract class Animals {
         this.maxRun = maxRun;
     }
 
-    public void setMaxJump(int maxJump) {
+    public void setMaxJump(double maxJump) {
         this.maxJump = maxJump;
     }
 
