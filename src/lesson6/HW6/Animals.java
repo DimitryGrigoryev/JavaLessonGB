@@ -24,7 +24,7 @@ public abstract class Animals {
         this.maxRun = maxRun;
     }
 
-    public void setMaxJump(int maxJump) {
+    public void setMaxJump(double maxJump) {
         this.maxJump = maxJump;
     }
 
