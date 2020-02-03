@@ -14,8 +14,12 @@ public class Cat extends Animals {
 
 
     @Override
-    public boolean run(int distance) {
+    public boolean run(int catRun) {
+        if (this.maxRun >= catRun)
+            System.out.printf("Кот смог пробежать %s. Ограничения = %s%n", catRun, maxRun);
+        return true;
 
+        System.out.printf("Кот не может столько бегать %s. Ограничения = %s%n", catRun, maxRun);
         return false;
     }
 
