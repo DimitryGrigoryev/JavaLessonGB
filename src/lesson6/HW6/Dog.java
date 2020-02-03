@@ -5,6 +5,7 @@ import lesson6.Animal;
 public class Dog extends Animals {
 
 
+
 //    private int heightJump;
 //
 //    public Dog(String name, String color, int age, int heightJump) {

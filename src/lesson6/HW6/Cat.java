@@ -4,10 +4,33 @@ import lesson6.Animal;
 
 public class Cat extends Animals {
 
+    public static final int catMaxRun = 200;
+    protected int catMaxJump = 2;
+    protected int catMaxSwim = 0;
+
+    public Cat(int maxRun, int maxJump, int maxSwim) {
+        super(maxRun, maxJump, catMaxSwim);
+    }
 
 
+    @Override
+    public boolean run(int distance) {
 
-//    //    private String name;
+        return false;
+    }
+
+    @Override
+    public boolean swim(int distance) {
+        return false;
+    }
+
+    @Override
+    public boolean jump(int height) {
+        return false;
+    }
+
+
+//     //   private String name;
 //    private int weight;
 //
 //    public Cat(String name, String color, int age, int weight) {
