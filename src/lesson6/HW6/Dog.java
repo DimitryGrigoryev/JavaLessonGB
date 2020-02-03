@@ -1,9 +1,28 @@
 package lesson6.HW6;
 
-import lesson6.Animal;
-
 public class Dog extends Animals {
+    public static final int dogMaxRun = 500;
+    public static final double dogMaxJump = 0.5;
+    public static final int dogMaxSwim = 10;
 
+    public Dog(int maxRun, double maxJump, int maxSwim) {
+        super(maxRun, maxJump, maxSwim);
+    }
+
+    @Override
+    public boolean run(int distance) {
+        return false;
+    }
+
+    @Override
+    public boolean swim(int distance) {
+        return false;
+    }
+
+    @Override
+    public boolean jump(int height) {
+        return false;
+    }
 
 
 //    private int heightJump;

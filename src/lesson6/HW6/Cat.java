@@ -5,8 +5,8 @@ import lesson6.Animal;
 public class Cat extends Animals {
 
     public static final int catMaxRun = 200;
-    protected int catMaxJump = 2;
-    protected int catMaxSwim = 0;
+    public static final int catMaxJump = 2;
+    public static final int catMaxSwim = 0;
 
     public Cat(int maxRun, int maxJump, int maxSwim) {
         super(maxRun, maxJump, catMaxSwim);
@@ -15,10 +15,10 @@ public class Cat extends Animals {
 
     @Override
     public boolean run(int catRun) {
-        if (this.maxRun >= catRun)
+        if (this.maxRun >= catRun) {
             System.out.printf("Кот смог пробежать %s. Ограничения = %s%n", catRun, maxRun);
-        return true;
-
+            return true;
+        }
         System.out.printf("Кот не может столько бегать %s. Ограничения = %s%n", catRun, maxRun);
         return false;
     }
