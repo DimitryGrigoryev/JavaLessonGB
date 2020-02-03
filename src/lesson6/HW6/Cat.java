@@ -8,77 +8,41 @@ public class Cat extends Animals {
     public static final int catMaxJump = 2;
     public static final int catMaxSwim = 0;
 
-    public Cat(int maxRun, int maxJump, int maxSwim) {
+    public Cat(int maxRun, int maxJump) {
         super(maxRun, maxJump, catMaxSwim);
+    }
+
+    public Cat(){
+        super (catMaxRun, catMaxJump, catMaxSwim);
     }
 
 
     @Override
     public boolean run(int catRun) {
         if (this.maxRun >= catRun) {
-            System.out.printf("Кот смог пробежать %s. Ограничения = %s%n", catRun, maxRun);
+            System.out.printf("Кот смог пробежать %s м. Ограничения = %s%n", catRun, maxRun);
             return true;
         }
-        System.out.printf("Кот не может столько бегать %s. Ограничения = %s%n", catRun, maxRun);
+        System.out.printf("Кот не может столько бегать %s м. Ограничения = %s%n", catRun, maxRun);
         return false;
     }
 
     @Override
-    public boolean swim(int distance) {
+    public boolean swim(int catSwim) {
+        System.out.printf("Коты не умеют плавать %n");
         return false;
     }
 
     @Override
-    public boolean jump(int height) {
+    public boolean jump(double catJump) {
+        if (this.maxJump >= catJump) {
+            System.out.printf("Кот смог подпрыгнуть на %s м. Ограничения = %s%n", catJump, maxJump);
+            return true;
+        }
+        System.out.printf("Кот не может так высоко прыгать на - %s м. Ограничение = %s%n", catJump, maxJump);
         return false;
     }
 
 
-//     //   private String name;
-//    private int weight;
-//
-//    public Cat(String name, String color, int age, int weight) {
-//        super(name, color, age);
-//        this.weight = weight;
-////        this.name = super.name;
-//    }
-//
-//    public Cat(String name, String color, int age) {
-//        this(name, color, age, 0);
-//    }
-//
-//    public int getWeight() {
-//        return weight;
-//    }
-//
-//    public void setWeight(int weight) {
-//        this.weight = weight;
-//    }
-//
-//    @Override
-//    public void printInfo() {
-//        System.out.printf("Кличка = %s; Цвет = %s; Возраст = %d; Вес = %d%n",
-//                getName(),
-//                getColor(),
-//                getAge(),
-//                getWeight());
-//    }
-//
-//    @Override
-//    public void voice() {
-////        super.voice();
-//        System.out.println("Кот сказал 'Мяу!'");
-//    }
-//
-//    @Override
-//    public String toString() {
-//        return "Cat{" +
-//                "weight=" + weight +
-//                '}';
-//    }
-//
-//
-//    public void test(int a, int b) {
-//        super.test(a);
-//    }
+
 }
