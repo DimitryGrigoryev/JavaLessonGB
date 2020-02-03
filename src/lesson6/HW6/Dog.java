@@ -1,16 +1,10 @@
 package lesson6.HW6;
 
 public class Dog extends Animals {
-    public static final int dogMaxRun = 500;
-    public static final double dogMaxJump = 0.5;
-    public static final int dogMaxSwim = 10;
+
 
     public Dog(int maxRun, double maxJump, int maxSwim) {
         super(maxRun, maxJump, maxSwim);
-    }
-    
-    public Dog(){
-        super (dogMaxRun, dogMaxJump, dogMaxSwim);
     }
 
     @Override

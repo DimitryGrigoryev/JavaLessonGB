@@ -4,18 +4,11 @@ import lesson6.Animal;
 
 public class Cat extends Animals {
 
-    public static final int catMaxRun = 200;
-    public static final int catMaxJump = 2;
     public static final int catMaxSwim = 0;
 
     public Cat(int maxRun, int maxJump) {
         super(maxRun, maxJump, catMaxSwim);
     }
-
-    public Cat(){
-        super (catMaxRun, catMaxJump, catMaxSwim);
-    }
-
 
     @Override
     public boolean run(int catRun) {

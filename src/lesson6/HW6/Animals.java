@@ -12,9 +12,9 @@ public abstract class Animals {
         this.maxSwim = maxSwim;
     }
 
-    public abstract boolean run(int distance);
-    public abstract boolean swim(int distance);
-    public abstract boolean jump(double height);
+    public abstract boolean run(int run);
+    public abstract boolean swim(int swim);
+    public abstract boolean jump(double jump);
 
     public void printInfo() {
         System.out.println(this);
