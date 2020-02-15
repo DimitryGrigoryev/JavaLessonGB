@@ -31,7 +31,7 @@ public class Staff {
 
     }
 
-    private static void printInfo(Object staff) {
+    private static void printInfo(Staff staff) {
         System.out.println(staff);
     }
 
