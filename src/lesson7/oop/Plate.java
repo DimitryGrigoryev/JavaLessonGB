@@ -8,20 +8,16 @@ public class Plate {
         this.food = food;
     }
 
-    public void info() {
-        System.out.println(this);
-    }
-
     public int getFood() {
         return food;
     }
 
-    public void setFood(int food) {
-        this.food = food;
+    public void addFood(int foodCount) {
+        this.food += foodCount;
     }
 
-    public void decreaseFood(int n) {
-        this.food -= n;
+    public void decreaseFood(int foodCount) {
+        this.food -= foodCount;
     }
 
     @Override
@@ -29,5 +25,8 @@ public class Plate {
         return "Plate{" +
                 "food=" + food +
                 '}';
+    }
+    public boolean isFoodEnough(int foodCount) {
+        return getFood() >= foodCount;
     }
 }
