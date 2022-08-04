@@ -22,7 +22,7 @@ public class Dog extends PetAnimal {
     }
 
     public void jump() {
-        System.out.println("Собака прыгнала на высоту " + getHeightJump());
+        System.out.println("Собака прыгнула на высоту " + getHeightJump());
     }
 
     @Override
